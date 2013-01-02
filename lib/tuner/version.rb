@@ -1,3 +1,3 @@
-module Tuner2
+module Tuner
   VERSION = "0.0.1"
 end

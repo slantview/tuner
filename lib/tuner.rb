@@ -1,8 +1,11 @@
 require "tuner/version"
 require "tuner/ui"
+require "tuner/tasks"
 
 module Tuner
-  def ui
-    @ui ||= Tuner::UI.new
+  class << self
+    def ui
+      @ui ||= Tuner::UI.new
+    end
   end
 end

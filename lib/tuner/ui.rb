@@ -21,14 +21,14 @@ module Tuner
       exit(-1)
     end
 
-    def table(headers, data)
-      full_table = table do
-        self.headings = headers
-        data.each do |rows|
-          add_row rows
-        end
-      end
-      say(full_table)
+    def table(headers, rows, title = nil, style = {})
+      table = Terminal::Table.new
+      table.title = title unless title.nil?
+      table.headings = headers
+      table.rows = rows
+      table.style = style
+      
+      say(table)
     end
   end
 end

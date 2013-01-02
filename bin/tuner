@@ -1,23 +1,6 @@
-#!/bin/env ruby
+#!/usr/bin/env ruby
 
-require "tuner"
+$:.push File.expand_path("../../lib", __FILE__)
+require 'tuner'
 
-data = {
-  "Header" => [
-    "something",
-    "something else"
-    "other thing"
-  ],
-  "Next Header" => [
-    "asdf asdf",
-    "fdkjalsf sdfkjd",
-    "asdfdf dfsdf"
-    "asdf dfdkjdkjdlsk slkdj"  
-  ],
-  "Final Header" => [
-    "This should be pretty long",
-    "this should be devven longer because I dasid dso"
-  ]
-}
-
-Tuner.ui.table(data)
+Tuner::Tasks.start
